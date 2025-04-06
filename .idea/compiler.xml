@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="task-service" />
-        <module name="productivityservice" />
         <module name="eureka" />
       </profile>
       <profile name="Annotation profile for user-service" enabled="true">
@@ -19,16 +18,21 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+        <module name="productivityservice" />
         <module name="user-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway (1)" target="23" />
+      <module name="api-gateway (2)" target="21" />
       <module name="userservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway (1)" options="-parameters" />
+      <module name="api-gateway (2)" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="productivityservice" options="-parameters" />
       <module name="task-service" options="-parameters" />
